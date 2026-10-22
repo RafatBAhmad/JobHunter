@@ -1,0 +1,26 @@
+{
+  "name": "job-hunter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "وكيل يبحث يومياً عن وظائف مناسبة لرأفت أحمد: عن بعد أو بانتقال إلى ماليزيا وإندونيسيا وتركيا",
+  "type": "module",
+  "scripts": {
+    "hunt": "tsx src/index.ts",
+    "dry-run": "tsx src/index.ts --dry-run",
+    "check-sources": "tsx src/index.ts --check-sources",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.1.0",
+    "fast-xml-parser": "^5.11.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

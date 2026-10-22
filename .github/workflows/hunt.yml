@@ -1,0 +1,52 @@
+name: Job hunt
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # 07:00 Palestine summer time (06:00 in winter)
+  workflow_dispatch:
+    inputs:
+      web:
+        description: "Run the web search today (Malaysia / Indonesia / Turkey + Arabic boards)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: job-hunt
+  cancel-in-progress: false
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Hunt
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          MIN_SCORE: ${{ vars.MIN_SCORE }}
+          MAX_ALERTS: ${{ vars.MAX_ALERTS }}
+          MAX_SCORE_JOBS: ${{ vars.MAX_SCORE_JOBS }}
+          WEB_SEARCH_DAYS: ${{ vars.WEB_SEARCH_DAYS }}
+        run: npx tsx src/index.ts ${{ (github.event_name == 'workflow_dispatch' && inputs.web) && '--web' || '' }}
+
+      - name: Save seen jobs and report
+        if: always()
+        run: |
+          git config user.name "job-hunter-bot"
+          git config user.email "job-hunter-bot@users.noreply.github.com"
+          git add data reports
+          git diff --cached --quiet || (git commit -m "hunt: $(date -u +%F)" && git push)

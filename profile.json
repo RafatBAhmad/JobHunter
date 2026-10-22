@@ -1,0 +1,49 @@
+{
+  "name": "Ra'fat Ahmad",
+  "headline": "Founder & Full-Stack Software Engineer (Dhad Tech) — Flutter · NestJS · Next.js · Spring Boot · PostgreSQL · AWS",
+  "based_in": "Palestine (West Bank), UTC+2/UTC+3",
+  "citizenship": "Palestinian passport — needs employer visa/work-permit sponsorship for any relocation",
+  "years_experience": 4,
+  "seniority": "Mid-level to Senior. Not junior/intern. Not Staff/Principal/Director roles that demand 8+ years.",
+  "target_titles": [
+    "Full-Stack Engineer / Developer",
+    "Backend Engineer (Node.js / NestJS / TypeScript)",
+    "Backend Engineer (Java / Spring Boot)",
+    "Mobile Engineer (Flutter)",
+    "Software Engineer (product / SaaS)"
+  ],
+  "skills_core": [
+    "TypeScript", "JavaScript", "Node.js", "NestJS", "Express", "Next.js", "React",
+    "Flutter", "Dart", "Java", "Spring Boot", "Spring Security",
+    "PostgreSQL", "Prisma", "Drizzle", "MySQL", "MongoDB", "Redis",
+    "REST APIs", "WebSockets / Socket.IO", "Docker", "AWS (Lambda, EC2, RDS, S3)",
+    "GitHub Actions CI/CD", "Firebase / FCM", "Multi-tenant SaaS"
+  ],
+  "skills_secondary": ["Python", "React Native (Expo)", "Tailwind CSS", "BullMQ", "Railway", "Sentry", "Google Play / App Store publishing"],
+  "evidence": [
+    "Built and runs 6 products end-to-end at Dhad Tech; 3 apps published on Google Play and App Store (Ishtarili, Sh5e, Tariqi — Tariqi passed 1k users in 3 months)",
+    "2 multi-tenant SaaS platforms live: Almohaseb (accounting/POS, PostgreSQL RLS, offline-first PWA) and Maw3id (booking/CRM, WhatsApp API)",
+    "Software Engineer at Ejada (Riyadh, remote) 2023–2024: Spring Boot microservices for fintech and government clients",
+    "AWS Technical Support Engineer at CollegeSource (remote) 2022–2024",
+    "Backend Developer at Kiitos Technology (Node.js/TypeScript, AWS Lambda) 2022",
+    "AWS Certified Cloud Practitioner; B.Sc. Computer Systems Engineering, Birzeit University"
+  ],
+  "languages": "Arabic native. English intermediate (B1): fine for written async work and technical calls, weaker for roles that demand native/fluent spoken English (client-facing sales-style roles).",
+  "preferences": {
+    "remote": "Remote roles hireable from Palestine: 'worldwide', 'anywhere', EMEA, MENA, Middle East, Gulf, or timezone ranges that include UTC+2/UTC+3. Contractor or EOR arrangements are fine.",
+    "relocation_countries": ["Malaysia", "Indonesia", "Turkey"],
+    "relocation_cities_hint": ["Kuala Lumpur", "Cyberjaya", "Penang", "Jakarta", "Bali", "Bandung", "Surabaya", "Istanbul", "Ankara", "Izmir"],
+    "relocation_rule": "On-site or hybrid roles count only in Malaysia, Indonesia or Turkey, and only when the employer sponsors visas/work permits or clearly hires foreigners (relocation package is a strong plus).",
+    "arabic_bonus": "Roles at Arabic-speaking or Gulf/MENA companies, or roles where Arabic is useful, are a plus.",
+    "min_salary_usd_per_year": null
+  },
+  "exclude": [
+    "Roles restricted to residents/citizens of a specific country outside MENA (e.g. US-only, UK-only, Canada-only, EU-only, LATAM-only, India-only)",
+    "Roles requiring US security clearance or work authorization",
+    "On-site roles outside Malaysia, Indonesia, Turkey",
+    "Non-engineering roles (sales, support-only, design-only, data entry)",
+    "Internships and junior/graduate programs",
+    "Pure data science / ML research, embedded, game engine, blockchain-only roles",
+    "Unpaid, equity-only or commission-only positions"
+  ]
+}
